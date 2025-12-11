@@ -4,6 +4,7 @@ from langchain_core.tools import create_retriever_tool
 from langchain_openai import OpenAIEmbeddings
 from langchain_qdrant import QdrantVectorStore
 
+from telegram_agent_aws.config import settings
 from telegram_agent_aws.infrastructure.clients.qdrant import get_qdrant_client
 
 @lru_cache(maxsize=1)

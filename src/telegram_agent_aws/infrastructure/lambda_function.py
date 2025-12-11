@@ -39,7 +39,7 @@ async def process_update(update_data):
         if update.message: 
             try:
                 await update.message.reply_text("Sorry, something went wrong processing your message.")
-            except Exception as e:
+            except Exception as reply_error:
                 print(f"Failed to send error message: {reply_error}")
         raise
     finally:
