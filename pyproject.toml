@@ -1,5 +1,5 @@
 [project]
-name = "ai-project-try"
+name = "telegram-agent-aws"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -7,14 +7,24 @@ requires-python = ">=3.12"
 dependencies = [
     "elevenlabs>=2.26.1",
     "ipykernel>=7.1.0",
+    "jsonpatch>=1.33",
     "langchain-community>=0.4.1",
     "langchain-core>=1.1.3",
     "langchain-openai>=1.1.1",
+    "langchain-qdrant>=1.1.0",
     "langgraph>=1.0.4",
     "langgraph-prebuilt>=1.0.5",
+    "loguru>=0.7.3",
     "openai>=2.9.0",
+    "opik>=1.9.46",
     "pydantic>=2.12.5",
     "pydantic-settings>=2.12.0",
     "pypdf>=6.4.1",
     "python-telegram-bot>=22.5",
 ]
+
+[project.scripts]
+telegram_agent_aws = "telegram_agent_aws.cli:app"
+
+[tool.uv]
+package = true
