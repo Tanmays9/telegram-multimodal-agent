@@ -1,4 +1,4 @@
-# AI Project Try - Telegram Agent
+# Telegram Multimodal Agent
 
 A Telegram bot agent built for AWS Lambda, capable of handling text, voice, and image interactions using OpenAI, Qdrant, and ElevenLabs.
 
