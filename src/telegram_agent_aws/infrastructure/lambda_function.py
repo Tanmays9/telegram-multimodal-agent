@@ -1,7 +1,13 @@
-
+import asyncio
+import json
 from telegram import Bot, Update
 
 from telegram_agent_aws.config import settings
+from telegram_agent_aws.infrastructure.telegram.handlers import (
+    handle_text,
+    handle_voice,
+    handle_photo,
+)
 
 async def process_update(update_data):
     bot = Bot(token=settings.TELEGRAM_BOT_TOKEN)

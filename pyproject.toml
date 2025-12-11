@@ -13,18 +13,49 @@ dependencies = [
     "langchain-openai>=1.1.1",
     "langchain-qdrant>=1.1.0",
     "langgraph>=1.0.4",
+    "langgraph-checkpoint-mongodb>=0.3.0",
     "langgraph-prebuilt>=1.0.5",
     "loguru>=0.7.3",
     "openai>=2.9.0",
     "opik>=1.9.46",
     "pydantic>=2.12.5",
     "pydantic-settings>=2.12.0",
+    "pymongo[srv]>=4.15.5",
     "pypdf>=6.4.1",
     "python-telegram-bot>=22.5",
+    "qdrant-client>=1.16.1",
+]
+
+requires-python = ">= 3.10"
+
+[dependency-groups]
+dev = [
+    "coverage",
+    "pre-commit",
+    "pytest",
+    "ruff",
 ]
 
 [project.scripts]
 telegram_agent_aws = "telegram_agent_aws.cli:app"
+
+[tool.ty]
+# All rules are enabled as "error" by default; no need to specify unless overriding.
+# Example override: relax a rule for the entire project (uncomment if needed).
+# rules.TY015 = "warn"  # For invalid-argument-type, warn instead of error.
+
+[tool.ruff]
+line-length = 200
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # Pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "UP",  # pyupgrade
+]
 
 [tool.uv]
 package = true
