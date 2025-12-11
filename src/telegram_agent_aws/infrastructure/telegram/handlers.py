@@ -1,5 +1,10 @@
 import base64
+import os
 
+from telegram import Update
+from telegram.ext import ContextTypes
+
+from telegram_agent_aws.application.conversation_service.generate_response import get_agent_response
 from telegram_agent_aws.infrastructure.clients.elevenlabs import get_elevenlabs_client
 from telegram_agent_aws.infrastructure.clients.openai import get_openai_client
 
